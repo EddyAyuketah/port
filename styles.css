@@ -1,0 +1,182 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: #1e1e1e;
+}
+header {
+    background: linear-gradient(45deg, #ff1e56, #ffac41);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: #ffac41;
+}
+.hero {
+    margin: 50px 0;
+    transform: rotateY(0deg);
+    animation: rotate 10s infinite linear;
+}
+.hero h1, .hero p {
+    animation: fadeIn 2s ease-in-out;
+}
+@keyframes rotate {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+section {
+    padding: 50px;
+    color: white;
+}
+.skills .skill {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    background: #ff1e56;
+    border-radius: 5px;
+    transform: scale(1);
+    transition: transform 0.3s;
+    color: white;
+    font-weight: bold;
+}
+.skills .skill:hover {
+    transform: scale(1.1);
+    background: #ffac41;
+}
+.project-card, .job-card {
+    background: #333;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.project-card:hover, .job-card:hover {
+    transform: translateY(-10px);
+}
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+form button {
+    padding: 10px 20px;
+    background: #ff1e56;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+form button:hover {
+    background: #ffac41;
+}
+.social-links a {
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    color: #ff1e56;
+    font-weight: bold;
+}
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1001;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.popup ul {
+    list-style: none;
+    padding: 0;
+}
+
+.popup button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.open-popup {
+    display: block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1002;
+}
+
+.btn-professional {
+    background: #ff5733;
+    color: white;
+}
+
+.btn-languages {
+    background: #33ff57;
+    color: white;
+}
+
+.btn-interests {
+    background: #3357ff;
+    color: white;
+}
+
+.btn-references {
+    background: #ff33a8;
+    color: white;
+}
+
+.btn-professional:hover, .btn-languages:hover, .btn-interests:hover, .btn-references:hover {
+    opacity: 0.8;
+}

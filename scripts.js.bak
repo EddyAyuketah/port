@@ -1,0 +1,32 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Add smooth scrolling to all links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Popup references panel
+    const openPopupButton = document.getElementById('open-popup');
+    const closePopupButton = document.getElementById('close-popup');
+    const referencesOverlay = document.getElementById('references-overlay');
+    const referencesPopup = document.getElementById('references-popup');
+
+    openPopupButton.addEventListener('click', () => {
+        referencesOverlay.style.display = 'block';
+        referencesPopup.style.display = 'block';
+    });
+
+    closePopupButton.addEventListener('click', () => {
+        referencesOverlay.style.display = 'none';
+        referencesPopup.style.display = 'none';
+    });
+
+    referencesOverlay.addEventListener('click', () => {
+        referencesOverlay.style.display = 'none';
+        referencesPopup.style.display = 'none';
+    });
+});
